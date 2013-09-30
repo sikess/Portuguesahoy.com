@@ -1,0 +1,22 @@
+.degra_menu_top{background-image:url(../img/degradado_men_top.png);background-repeat:repeat-x}
+.borderRadius3{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;behavior:url(PIE.htc)}
+.arial_gral{font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#000}
+.titulo_post_time{font-family:"Times New Roman",Times,serif;font-size:12px;color:#000}
+body{font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#000;margin:0;background-color:#fff}
+.mi_main{width:100%}
+.contenedor{width:100%;margin:0 auto;position:relative}
+.contiene_top{background-color:#fff;width:100%;height:37px}
+.menu-top-container{height:37px;width:500px;margin:centrar_div;float:left}
+.cont_search{height:32px;bottom:0;padding-top:5px}
+.cont_search div{padding-top:2px;float:right}
+.cont_search{float:right;margin:0 auto;margin-right:20px}
+#con_menu_top{height:45px;background-image:url(../img/degradado_men_top.png);background-repeat:repeat-x;width:1058px;margin:0 auto}
+.list_men_top{margin:0;padding-top:10px;float:left;font-size:12px}
+ul.list_men_top li{display:inline-block;padding-bottom:5px;color:#fff;text-decoration:none}
+ul.list_men_top li a{text-decoration:none;color:#fff;padding:5px 5px 5px 5px}
+ul.list_men_top li a:hover{background-color:#00bf09;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;behavior:url(PIE.htc)}
+#cont_cabecera{margin:0 auto;width:100%;height:165px;background-image:url(../img/fondo_verde.png);background-repeat:no-repeat;background-position:top center;margin:0 auto}
+._cabecera{margin:0 auto;width:1000px}
+#seccion_cabecera{margin:0 auto;height:99px;width:480px;padding-left:20px;padding-top:23px;float:left}
+._menu_prin{margin:0 auto;width:1000px}
+#cont_menu_prin{margin:0 auto;clear:both;height:37px;margin-top:20px;background-color:#007dd9}
