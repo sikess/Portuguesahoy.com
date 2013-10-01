@@ -36,7 +36,7 @@ ul.list_men_top li a:hover{background-color:#454545;-webkit-border-radius:3px;-m
 #access .menu-header,div.menu{font-size:14px;margin-left:10px;width:928px}
 #access .menu-header ul{list-style:none;margin-left:0;padding-left:0}
 .menu-header ul li{display:inline-block;position:relative;padding-left:0}
-#access .menu-header a{color:#fff;display:inline-block;line-height:39px;padding:0 13px;text-decoration:none;margin-left:-7px;margin-right:-10px}
+#access .menu-header a{color:#fff;display:inline-block;line-height:39px;padding:0 13px;text-decoration:none;margin-left:-8px;margin-right:-8px}
 #access ul ul{box-shadow:0 3px 3px rgba(0,0,0,0.2);-moz-box-shadow:0 3px 3px rgba(0,0,0,0.2);-webkit-box-shadow:0 3px 3px rgba(0,0,0,0.2);border-radius:0 0 5px 5px;-moz-border-radius:0 0 5px 5px;-webkit-border-radius:0 0 5px 5px;background-color:#000;display:none;position:absolute;top:37px;left:0;float:left;width:180px;z-index:99999;behavior:url(PIE.htc)}
 #access ul ul li{min-width:180px}
 #access ul ul ul{left:10%;top:10%}
