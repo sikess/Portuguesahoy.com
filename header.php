@@ -99,7 +99,7 @@
 	      </div><!--FINLOGO-->
     
 		    <div id="seccion_cabecera">
-		    	Publicidad
+		    	
 			</div>
 	    
     </div><!-- .cont_log_form -->
