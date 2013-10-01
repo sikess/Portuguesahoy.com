@@ -1,5 +1,6 @@
 //Color fondo pagina
 @blanco: #FFF;
+@verde:#454545;
 
 
 //Generales
@@ -205,7 +206,7 @@ ul.list_men_top li a {
 }
 
 ul.list_men_top li a:hover {
-	background-color:#00BF09;
+	background-color:@verde;
 	.borderRadius3;
 }
 
@@ -274,7 +275,7 @@ ul.list_men_top li a:hover {
 	}
 	
 #inicio_link ul li a:hover{
-	background-color:#000;
+	background-color:@verde;
 	background-image:url(img/home.png);
 	background-repeat:no-repeat;
 	background-position: 12px 10px;
@@ -307,13 +308,6 @@ div.menu {
 	width: 928px;
 }
 
-#access .menu-header ul .con-sub-menu{ /*ul del menu*/
-/*
-	background-image:url(../img/flecha_down.png);
-	padding-right:5%;*/
-		
-	}
-
 
 
 #access .menu-header ul { /*ul del menu*/
@@ -326,13 +320,17 @@ div.menu {
 .menu-header ul li {
 	display:inline-block;
 	position: relative;
+	padding-left: 0px;
 }
 #access .menu-header a { /*tolos los link del menu y sub menu*/
 	color: #FFF;
 	display:inline-block;
 	line-height: 39px;
-	padding:0 10px;/**/
+	padding: 0px 13px;/**/
 	text-decoration: none;
+	margin-left: -7px;
+	margin-right: -10px;
+	// margin-top: 10px;
 	
 }
 
@@ -373,19 +371,18 @@ div.menu {
 }
 #access ul ul a { /*links de Sub menu escondido*/
 	background: #000;
-	/*line-height: 1em;*/
-	/*padding: 10px;*/
 	width:150px;
 	height:30px;
-	/*padding-top:50px;*/
 	
 }
 #access li:hover > a{
 	
-	background: #000;
-	color: #fff;
+	background-image: url('../img/degradado_men_princ_over.png');
+	background-position: center;
+	background-repeat:repeat-x;
+	color:@blanco;
+	text-decoration: underline;
 	
-		
 }	
 #access ul ul :hover > a {
 	background:#007DD9;
@@ -438,6 +435,14 @@ div.menu {
 	 background-position: 93% 62%;
 }
 
+#access .menu-header .serpa_men_princ {
+	background-image: url('../img/separa_men_princ.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	padding: 10px 0px 10px 0px;
+	
+
+}
 
 
 
