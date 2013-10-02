@@ -3,7 +3,8 @@
 .degra_menu_princ{background-image:url(../img/degradado_men_princ.png);background-repeat:repeat-x;background-position:center}
 .borderRadius3{-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;behavior:url(PIE.htc)}
 .arial_gral{font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#000}
-.titulo_post_time{font-family:"Times New Roman",Times,serif;font-size:12px;color:#000}
+.titulo_post_time{font-family:"Times New Roman",Times,sans-serif;font-size:12px;color:#000}
+img{border:0}
 body{font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#000;margin:0;background-color:#fff}
 .mi_main{width:100%}
 .contenedor{width:100%;margin:0 auto;position:relative}
@@ -22,7 +23,7 @@ body{font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#000;margin:0;b
 .list_men_top{margin:0;padding-top:10px;float:left;font-size:12px}
 ul.list_men_top li{display:inline-block;padding-bottom:5px;color:#fff;text-decoration:none}
 ul.list_men_top li a{text-decoration:none;color:#fff;padding:5px 5px 5px 5px}
-ul.list_men_top li a:hover{background-color:#454545;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;behavior:url(PIE.htc)}
+ul.list_men_top li a:hover{background-color:#00bf09;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;behavior:url(PIE.htc)}
 #cont_cabecera{margin:0 auto;width:1058px;height:155px;background-image:url(../img/fondo_verde.png);background-repeat:no-repeat;background-position:top center;margin:0 auto}
 ._cabecera{margin:0 auto;width:1058px}
 #seccion_cabecera{margin:0 auto;height:99px;width:480px;padding-left:20px;padding-top:10px;float:left}
@@ -30,7 +31,7 @@ ul.list_men_top li a:hover{background-color:#454545;-webkit-border-radius:3px;-m
 #inicio_link{background-image:url(img/home.png);background-repeat:no-repeat;background-position:12px 10px;float:left;height:37px;width:50px}
 #inicio_link ul li{margin:0;list-style:none;display:inline-block}
 #inicio_link ul li a{margin-left:-40px;padding-left:14px;padding-right:36px;padding-bottom:12px;padding-top:15px;}
-#inicio_link ul li a:hover{background-color:#454545;background-image:url(img/home.png);background-repeat:no-repeat;background-position:12px 10px;border:none}
+#inicio_link ul li a:hover{background-color:#00bf09;background-image:url(img/home.png);background-repeat:no-repeat;background-position:12px 10px;border:none}
 #cont_menu_prin{margin:0 auto;clear:both;height:40px;background-image:url(../img/degradado_men_princ.png);background-repeat:repeat-x;background-position:center}
 #access{margin:0 auto;width:940px;text-align:center;height:40px}
 #access .menu-header,div.menu{font-size:14px;margin-left:10px;width:928px}
@@ -50,3 +51,43 @@ ul.list_men_top li a:hover{background-color:#454545;-webkit-border-radius:3px;-m
 #access .menu-header ul .con-sub-menu>a{background-image:url(../img/flecha_down.png);background-position:right;background-repeat:no-repeat;background-position:93%;padding-right:25px}
 #access .menu-header ul .con-sub-menu>a:hover{background-position:93% 62%}
 #access .menu-header .serpa_men_princ{background-image:url('../img/separa_men_princ.png');background-repeat:no-repeat;background-position:center;padding:10px 0 10px 0}
+.cabeza_secciones{background-color:#007dd9;height:28px;width:706px;padding:6px;color:#fff;vertical-align:baseline;margin-bottom:5px;border-top:4px solid #000;}
+.contenido_cabeza_secciones{height:32px;font-size:18px}
+.entre_seccion{height:5px}
+#conte_cuerpo{margin:0 auto;width:1058px}
+.conte_todos_post{float:left;background-color:#eee;width:758px;vertical-align:top}
+.conte_el_post{display:inline-block;float:left;position:relative;width:755px;height:235px;margin-bottom:30px}
+.conte_el_post a{text-decoration:none;color:#000}
+.cabeza_meta{padding:0 0 8px 8px;float:left;width:330px}
+.cabeza_post{font-family:"Times New Roman",Times,sans-serif;font-size:12px;font-size:22px;color:#000;padding:0 0 0 12px;margin-bottom:2px;float:left}
+.titulo_post{width:350px}
+.cuerpo_post{margin:0 3px 4px 4px;padding:6px;height:235px;background-color:#fff;border-top:6px solid #00357c}
+.imagen_post{float:left;background-color:#000;height:181px;width:367px}
+.leyenda_im{font-size:xx-small;margin-bottom:20px}
+.eti_cate{min-width:38px;height:18px;position:absolute;display:inline-block;padding:0 3px 0 3px;border-bottom:2px solid #00bf09;right:10px;color:#00357c;font-size:small;text-align:center}
+.eti_cate a{font-size:xx-small;font-weight:bolder;color:#00357c}
+.cont_foot_post{height:auto;width:350px;word-wrap:break-word;float:left;margin-left:12px}
+.post_meta{padding:4px;color:#00357c;font-size:10px}
+.post_meta a{color:#00357c;font-weight:bold}
+.fracmento_post{padding:8px;color:#000;font-size:12px;line-height:18px;text-align:justify;vertical-align:top;margin-bottom:5px}
+.lee_mas a{color:#fff;padding:6px;background-color:#00bf09;border-right:16px solid #00357c}
+.lee_mas{position:absolute;margin-top:250px}
+.foot_meta{height:22px;padding:6px 0 0 6px;position:absolute;width:100%;left:4px;vertical-align:bottom;bottom:-2px;font-size:11px}
+.entry-meta{padding-top:10px}
+.entry-content p{padding:0}
+.entry-meta{width:320px;float:left;padding-left:4px}
+.imgc{background-image:url('../img/coment.png');background-repeat:no-repeat;background-position:50% 60%;color:#fff;font-size:xx-small;padding:11px;text-align:center}
+.social_list{margin-top:2px;float:left;width:auto}
+.social_list ul{margin:0;padding:0;font-size:16px}
+.social_list ul li{display:inline;list-style:none;padding:0}
+.social_list a{color:#6c6c6c}
+.social_list ul li a:hover{color:#007dd9}
+.el_sidebar{float:left;width:275px;background-color:#fff;margin-left:6px;padding-bottom:6px;margin-bottom:10px}
+.el_sidebar a{color:#000;text-decoration:none}
+.conte_sidebar{display:inline-block;margin-bottom:20px}
+.titulo_seccion{background-color:#007dd9;font-size:18px;color:#fff;height:33px;padding:7px 0 0 10px;vertical-align:middle;border-top:4px solid #000}
+.post_comentado{float:left;width:100%;height:130px;background-color:#eee;border-bottom:2px solid #fff}
+.contenido_comentado{margin:9px;background-color:#fff;}
+.img_comentado{float:left;height:80px;width:80px;background-color:#fff}
+.name_post{float:left;background-color:#fff;height:64px;padding:8px;width:153px}
+.foot_comentado{clear:both;padding:6px;color:#212121;border-top:1px solid #eee;font-size:xx-small;border-left:4px solid #ccc}
