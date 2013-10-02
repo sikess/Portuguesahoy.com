@@ -46,12 +46,12 @@ echo '<img src="'.$postimage.'" alt="" />';
     <div class="cabeza_meta">
     	<div class="post_meta">
 				<?php
-					printf( __( '<a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> by </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'themename' ),
+					printf( __( '<a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> por </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'themename' ),
 						get_permalink(),
 						get_the_date( 'c' ),
 						get_the_date(),
 						get_author_posts_url( get_the_author_meta( 'ID' ) ),
-						sprintf( esc_attr__( 'View all posts by %s', 'themename' ), get_the_author() ),
+						sprintf( esc_attr__( 'View all posts por %s', 'themename' ), get_the_author() ),
 						get_the_author()
 					);
 				?>
@@ -85,7 +85,7 @@ echo '<img src="'.$postimage.'" alt="" />';
 		</div><!-- .entry-summary -->
 		<?php else : ?>
 		<div class="entry-content">
-			<?php the_content_limit('350'); /*the_excerpt_rss();*/ ?>
+			<?php the_content_limit('280'); /*the_excerpt_rss();*/ ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'themename' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		<?php endif; ?>
