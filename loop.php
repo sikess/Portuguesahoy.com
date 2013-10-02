@@ -85,7 +85,7 @@ echo '<img src="'.$postimage.'" alt="" />';
 		</div><!-- .entry-summary -->
 		<?php else : ?>
 		<div class="entry-content">
-			<?php the_content_limit('300'); /*the_excerpt_rss();*/ ?>
+			<?php the_content_limit('350'); /*the_excerpt_rss();*/ ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'themename' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		<?php endif; ?>

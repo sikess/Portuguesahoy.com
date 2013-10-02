@@ -569,7 +569,7 @@ function the_content_limit($max_char, $more_link_text = '(more...)', $striptease
          echo "...";
          echo "&nbsp;<a href='";
          the_permalink();
-         echo "'>Leer m&aacutes</a>";
+         echo "'></a>";
          // echo "</p>";
      }
      else {
