@@ -1,15 +1,17 @@
-//Color fondo pagina
+//Colores
 @blanco: #FFF;
 @verde:#00BF09;
 @negro:#000;
 @azul:#00357C;
 @azu_claro:#005A98;
+@color_e:#EEE;
 
 
-//Generales
+//Medidas Generales
 @full_ancho:100%;
 @centrar_div: 0 auto;
 @ancho_cuerpo:1058px;
+@ancho_cuerpo_post:758px;
 
 
 //Fuente de body
@@ -19,6 +21,12 @@
 //PRE ESTILOS MIXIN
 /////////////
 /////////////
+.a_hover_und_line {
+	a:hover{
+		text-decoration: underline;
+	}
+}
+
 .rep_x_center{
 	background-repeat: repeat-x;
 	background-position: center;
@@ -74,6 +82,7 @@
 img{
 	border: 0;
 }
+
 body{
 	.arial_gral;
 	margin: 0px;
@@ -87,7 +96,8 @@ body{
 .contenedor{
 	width: @full_ancho;
 	margin: @centrar_div;
-	position:relative;
+	clear: both;
+	//position:relative;
 }
 
 /*CABECERA*/
@@ -212,7 +222,6 @@ ul.list_men_top li a {
 	color:@blanco;
 	padding: 5px 5px 5px 5px;
 	// text-align:center;
-	
 }
 
 ul.list_men_top li a:hover {
@@ -221,8 +230,6 @@ ul.list_men_top li a:hover {
 }
 
 /*INICIO CONTENEDOR HEAD*/
-
-	
 #cont_cabecera{
 	margin:@centrar_div;
 	width:@ancho_cuerpo;
@@ -256,7 +263,6 @@ ul.list_men_top li a:hover {
 
 
 /*INICIO MENU PRINCIPAL*/
-
 #inicio_link{/*Link inicio casita*/
 	/*background-color:#007DD9;*/
 	background-image:url(img/home.png);
@@ -272,7 +278,7 @@ ul.list_men_top li a:hover {
 	margin:0;
 	list-style:none;
 	display:inline-block;
-	}
+}
 	
 #inicio_link ul li a{
 	margin-left:-40px;
@@ -280,9 +286,7 @@ ul.list_men_top li a:hover {
 	padding-right:36px;
 	padding-bottom:12px;
 	padding-top:15px;
-	
-	/*background-color:#39C;*/
-	}
+}
 	
 #inicio_link ul li a:hover{
 	background-color:@verde;
@@ -290,7 +294,6 @@ ul.list_men_top li a:hover {
 	background-repeat:no-repeat;
 	background-position: 12px 10px;
 	border:none;
-	
 }
 
 #cont_menu_prin{
@@ -298,7 +301,6 @@ ul.list_men_top li a:hover {
 	clear:both;
 	height:40px;
 	.degra_menu_princ;
-	
 }
 
 
@@ -307,7 +309,6 @@ ul.list_men_top li a:hover {
 	width: 940px;
 	text-align:center;
 	height: 40px;
-
 }
 
 
@@ -322,8 +323,7 @@ div.menu {
 #access .menu-header ul { /*ul del menu*/
 	list-style: none;
 	margin-left: 0;
-	padding-left:0;
-		
+	padding-left:0;	
 }
 
 .menu-header ul li {
@@ -501,7 +501,7 @@ div.menu {
 	position:relative;
 	width:755px;
 	height:235px;
-	margin-bottom:30px;
+	margin-bottom:50px;
 		
 }
 
@@ -606,11 +606,13 @@ div.menu {
 	margin-bottom: 5px;	
 }
 
+
 .lee_mas a{
 	color:@blanco;
 	padding: 6px;
 	background-color: @verde;
-	border-right: 16px solid @azul;
+	border-right: 16px solid @azu_claro;
+	
 }
 
 .lee_mas {
@@ -619,7 +621,7 @@ div.menu {
 	top:225px;
 	right: 10px;
 	color: @blanco;
-	
+	.a_hover_und_line;
 }
 
 .fle{
@@ -701,6 +703,35 @@ div.menu {
 
 /*///FIN LOS POST///*/
 
+////MAS COMENTADOS
+
+
+
+////.MAS COMENTADOS
+
+.elements_mas_coment{
+	width:@ancho_cuerpo_post;
+	background-color: @verde;
+	height:auto;
+}
+
+.contne_mas_coment{
+	float: left;
+	width:356px;
+	height:auto;
+	//background-color:@color_e;
+	margin: 0  8px 0 0;
+	padding: 8px 0 4px 10px;
+}
+
+.cuerp_mas_comet{
+	width: 345px;
+	height: 93px;
+	border: 1px solid #000;
+	background-color: @azul;
+	padding: 8px;
+}
+
 /*///INICIO SIDEBAR///*/
 .el_sidebar{
  	float:left;	
@@ -767,11 +798,76 @@ div.menu {
 	clear: both;
 	padding: 6px;
 	color: #212121;
-	border-top: 1px solid #EEE;
+	border-top: 1px solid @color_e;
 	font-size: xx-small;
 	border-left:  4px solid #CCC; 
 }
+// .SIDE BAR
 
+//PAGINADOR
+.cont_nav{
+	width: 758px;
+	margin: @centrar_div;
+}
+
+.navigation{
+	background-color: @blanco;
+}
+
+.pagenavi {
+	margin: @centrar_div;
+	text-align: center;
+    padding: 40px 0 40px 0;
+    width:350px;
+	
+}
+
+.pagenavi a {
+    padding: 5px 10px 4px 10px;
+    margin: 3px;
+    text-decoration: none;
+    color:@blanco;
+    background-color:@azu_claro;
+    .borderRadius3;
+}
+.pagenavi a:hover {
+    color: @blanco;
+    background-color: @verde;
+}
+
+.pagenavi span.pages {
+    padding: 5px 6px 4px 6px;
+    margin: 3px;
+    color: @negro;
+   	border:1px solid @color_e;
+    .borderRadius3;
+}
+
+.pagenavi span.current {
+    padding: 5px 9px 0px 9px;
+    margin: 3px 3px 0px 3px;
+    color: @negro;
+    border:1px solid @color_e;
+    border-bottom: 4px solid @verde;
+    .borderRadius3;
+}
+
+.pagenavi span.expand {
+    padding: 5px 6px 4px 6px;
+    margin: 3px;
+    color: @negro;
+    background-color: @blanco;
+    .borderRadius3;
+}
+
+.pagenavi .first, .pagenavi .last {
+
+}
+
+.pagenavi .single_page {
+//border: 1px dashed #ccc;
+}
+//.PAGINADOR
 
 //FOOTER
 .contenedor_footer{

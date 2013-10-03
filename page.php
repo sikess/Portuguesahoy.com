@@ -6,7 +6,7 @@
 
 get_header(); ?>
 
-		<div id="primary">
+		<div id="primary">99999
 			<div id="content">
 
 				<?php the_post(); ?>
@@ -27,6 +27,6 @@ get_header(); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
-
+<?php //if (function_exists('wp_corenavi')) wp_corenavi(); ?>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

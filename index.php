@@ -32,6 +32,53 @@ get_header(); ?>
 <!--	</div><!-- #content -->
 <!--</div>--><!-- #primary -->
 
+<!-- PAGINADOR -->
+<div class="contenedor"><!-- Paginador -->
+	<div class="cont_nav">
+		<div class="navigation">
+			<?php if(function_exists('pagenavi')) { pagenavi(); } ?>
+		</div>
+	</div><!-- .cont_nav -->
+</div><!-- .Paginador -->
+<!-- .AGINADOR -->
+
+<!-- MAS COMENTADOS -->
+
+<div class="contenedor">
+
+	<div class="elements_mas_coment">
+
+		<div class="contne_mas_coment">
+
+			<div class="cuerp_mas_comet">
+				s
+			</div>
+
+		</div>
+
+		<div class="contne_mas_coment">
+
+			<div class="cuerp_mas_comet">
+				s
+			</div>
+			
+		</div>
+
+		<div class="contne_mas_coment">
+
+			<div class="cuerp_mas_comet">
+				s
+			</div>
+			
+		</div>
+
+
+	</div>
+
+</div>
+
+
+<!-- .MAS COMENTADOS -->
 
 
 </div><!--Fin conte_todos_post-->
@@ -44,13 +91,14 @@ get_header(); ?>
 
 	</div>  
     
-</div><!--FIN CONTENEDOR DE CUERPO Y LISTA DE POST-->
-    
- </div><!-- .conte_cuerpo -->	
+		</div><!--FIN CONTENEDOR DE CUERPO Y LISTA DE POST-->
+	   
+	
+	 </div><!-- .conte_cuerpo -->	
 
-	<div class="contenedor"><!-- Footer -->
-	
-	
-			<?php get_footer();  ?>
-		
+
+
+
+<div class="contenedor"><!-- Footer -->
+	<?php get_footer();  ?>
 </div><!-- .Footer -->

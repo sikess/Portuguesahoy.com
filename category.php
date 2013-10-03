@@ -6,12 +6,21 @@
 
 get_header(); ?>
 
+<div class="contenedor"><!--CONTENEDOR DE CUERPO Y LISTA DE POST-->
+
+	<div class="entre_seccion"></div><!--F entre_seccion-->
+
+	<div id="conte_cuerpo">
+
+	<div class="conte_todos_post">
+
+
 		<section id="primary" role="region">
 			<div id="content">
 
 				<header class="page-header">
 					<h1 class="page-title"><?php
-						printf( __( 'Category Archives: %s', 'themename' ), '<span>' . single_cat_title( '', false ) . '</span>' );
+						printf( __( '%s', 'themename' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 					?></h1>
 
 					<?php $categorydesc = category_description(); if ( ! empty( $categorydesc ) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . $categorydesc . '</div>' ); ?>
@@ -21,6 +30,8 @@ get_header(); ?>
 
 			</div><!-- #content -->
 		</section><!-- #primary -->
+
+</div></div></div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

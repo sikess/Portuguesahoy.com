@@ -75,7 +75,7 @@ echo '<img src="'.$postimage.'" alt="" />';
 
 		<?php if ( is_archive() || is_search() ) : // Only display Excerpts for archives & search ?>
 		<div class="entry-summary">
-			<?php the_excerpt_rss();?>
+			<?php the_content_limit('280'); /*the_excerpt_rss();*/ ?>
 		</div><!-- .entry-summary -->
 		<?php else : ?>
 		<div class="entry-content">
