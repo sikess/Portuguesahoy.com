@@ -9,11 +9,7 @@
 
 
 <?php /* Start the Loop */ ?>
-<?php 
-
-$que_posts = new WP_Query('offset=0');
-while ($que_posts->have_posts() ) : $que_posts->the_post(); 
-?>
+<?php while ( have_posts() ) : the_post(); ?>
 
 	<div class="conte_el_post">
     <div class="cuerpo_post">
@@ -102,9 +98,7 @@ echo '<img src="'.$postimage.'" alt="" />';
 
 			<!--<span class="share_post">Compartir:</span>-->
  
-	 
-	 
-   
+	  
 
 		</footer><!-- #entry-meta -->
 
@@ -112,21 +106,19 @@ echo '<img src="'.$postimage.'" alt="" />';
 	</article><!-- #post-<?php the_ID(); ?> -->
 
 
-     <div class="social_list">
-    	<ul>
-    		<li>|</li>
-    		<li>Compartir:</li>
-    		<li><?php echo"<a target=_blank href=https://facebook.com/sharer.php?u=";the_permalink(); ?> <i class="foundicon-facebook"></i></a></li>
-    		<li><?php echo"<a target=_blank href=https://twitter.com/share?url=";the_permalink(); ?> <i class="foundicon-twitter"></i></a></li>
- 			<li><?php echo"<a target=_blank href=https://plus.google.com/share?url=";the_permalink(); ?> <i class="foundicon-google-plus"></i></a></li>
-    	</ul>   	
-    </div><!--.social_list-->
-      
-
-
+    
 	<?php comments_template( '', true ); ?>
     
-   
+    	<div class="social_list">
+	    	<ul>
+	    		<li>Compartir:</li>
+	    		<li><?php echo"<a target=_blank href=https://facebook.com/sharer.php?u=";the_permalink(); ?> <i class="foundicon-facebook"></i></a></li>
+	    		<li><?php echo"<a target=_blank href=https://twitter.com/share?url=";the_permalink(); ?> <i class="foundicon-twitter"></i></a></li>
+	 			<li><?php echo"<a target=_blank href=https://plus.google.com/share?url=";the_permalink(); ?> <i class="foundicon-google-plus"></i></a></li>
+		    	</ul>   	
+	    </div><!--.social_list-->
+      
+	 
 
    </div><!--.foot_metas-->
 

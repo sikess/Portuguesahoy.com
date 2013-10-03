@@ -75,8 +75,8 @@ ul.list_men_top li a:hover{background-color:#00bf09;-webkit-border-radius:3px;-m
 .lee_mas{position:absolute;float:right;top:225px;right:10px;color:#fff}
 .foot_meta{height:22px;padding:0 0 0 6px;position:absolute;width:367px;left:4px;vertical-align:bottom;bottom:-2px;font-size:11px;border-top:1px solid #eee}
 .entry-content p{padding:0}
-.entry-meta{padding-top:10px;width:105px;padding-left:4px;float:left}
-.social_list{margin-top:5px;float:right;width:160px;font-size:11px;text-align:right}
+.entry-meta{padding-top:10px;width:115px;padding-left:4px;float:left}
+.social_list{padding-top:5px;float:right;width:160px;font-size:11px;text-align:right}
 .social_list ul{display:inline-block;padding:0;margin:0}
 .social_list ul li{display:inline-block;list-style:none;padding:0;margin-left:5px;vertical-align:middle}
 .social_list a{color:#005a98;font-size:18px}
