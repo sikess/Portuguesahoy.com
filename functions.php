@@ -504,7 +504,8 @@ function popularPosts($num) {
 
 ////CORTADOR DE IMAGENES
 if ( function_exists( 'add_image_size' ) ) {  
-    add_image_size('para_los_post', 367, 181, true);  
+    add_image_size('para_los_post', 367, 181, true); 
+    add_image_size('mas_comentados', 126, 75, true); 
    
 }  
 
@@ -513,7 +514,7 @@ add_filter('image_size_names_choose', 'hmuda_image_sizes');
 function hmuda_image_sizes($sizes) {  
     $addsizes = array(  
         "para_los_post" => __("Cada post"),
-        
+        "mas_comentados" => __("Mas comentados"),
     );  
     $newsizes = array_merge($sizes, $addsizes);  
     return $newsizes;  
@@ -657,7 +658,7 @@ function mas_comentados($titulo){
                  $que_posts->the_post();
                  
             echo '<div class="img_comentado">';
-                echo'<a href="'; the_permalink(); echo'">'; the_post_thumbnail('post_sidebar'); echo'</a>';
+                echo'<a href="'; the_permalink(); echo'">'; the_post_thumbnail('mas_comentados'); echo'</a>';
             echo '</div>';
 
             echo'<div class="name_post">';

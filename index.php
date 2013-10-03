@@ -46,6 +46,8 @@ get_header(); ?>
 
 <div class="contenedor">
 
+	<?php mas_comentados('Mas');?>
+
 	<div class="elements_mas_coment">
 
 		<div class="contne_mas_coment">
