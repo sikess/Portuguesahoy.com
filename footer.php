@@ -5,17 +5,52 @@
  */
 ?>
 
-	</div><!-- #main  -->
+	<!-- </div> #main   -->
+	<div class="contenedor_footer">
+	
+		<div class="elemnetos_footer">
 
 	<footer id="colophon" role="contentinfo">
-			<div id="site-generator">
-				<small>&copy Copyright <?php echo date('Y') . " " . esc_attr( get_bloginfo( 'name', 'display' ) ); ?> <a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'themename' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s.', 'themename' ), 'WordPress' ); ?></a></small>
-				<?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
-			</div>
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	
+		<div class="columna_footer">
 
-<?php wp_footer(); ?>
+			<div class="contenido_columna">
+
+				<div class="lista_ctegorias_footer">
+					<ul>
+						<?php wp_list_categories('orderby=name&show_count=1&hide_empty=0&exclude=10'); ?> 
+					</ul>
+				</div>	
+
+			</div>
+		</div>
+
+		<div class="columna_footer">
+			<div class="contenido_columna">
+			
+
+			<div id="site-generator">
+				
+			</div>
+
+			</div>
+		
+		</div>
+
+
+		<div class="columna_footer">
+			<div class="contenido_columna">
+				sd
+			</div>
+		</div>
+
+	</footer><!-- #colophon -->
+<!-- </div> -->
+<!--</div>  #page  -->
+</div><!-- .elementos_footer -->
+
+	</div><!-- .contenedor_footer -->
+<?php //wp_footer(); ?>
 
 </body>
 </html>

@@ -48,8 +48,9 @@ get_header(); ?>
     
  </div><!-- .conte_cuerpo -->	
 
+	<div class="contenedor"><!-- Footer -->
 	
-
-
-<?php /*get_sidebar(); */?>
-<?php /*get_footer();*/ ?>
+	
+			<?php get_footer();  ?>
+		
+</div><!-- .Footer -->

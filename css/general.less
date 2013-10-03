@@ -19,6 +19,10 @@
 //PRE ESTILOS MIXIN
 /////////////
 /////////////
+.rep_x_center{
+	background-repeat: repeat-x;
+	background-position: center;
+}
 .serpa1{
 	background-image: url(../img/separa_buscar.png);
 	background-repeat: no-repeat;
@@ -546,7 +550,10 @@ div.menu {
 
 .leyenda_im{
 	font-size: xx-small;
-	margin-bottom: 20px;
+	width: 367px;
+	height: 20px;
+	float: left;
+	line-height: 10px;
 }
 
 .eti_cate{
@@ -558,7 +565,6 @@ div.menu {
 	border-bottom: 2px solid @verde;
 	right:10px;
 	color:@azul;
-	font-size:small;
 	text-align:center;
 	
 }
@@ -610,7 +616,7 @@ div.menu {
 .lee_mas {
 	position: absolute;
 	float: right;
-	margin-top:210px;
+	top:225px;
 	right: 10px;
 	color: @blanco;
 	
@@ -628,69 +634,69 @@ div.menu {
 
 	/*background-color: #D6D6D6;*/
 	height: 22px;
-	padding: 6px 0 0 6px;
+	padding: 0px 0 0 6px;
+	// margin-top: 50px;
 	position: absolute;
-	width: 100%;
+	width: 367px;
 	left: 4px;
 	vertical-align: bottom;
 	bottom: -2px;
 	font-size: 11px;
-
+	border-top: 1px solid #EEE;
 
 }
 
-.entry-meta{
-	padding-top: 10px;
-}
 
 .entry-content p{
 	padding:0;
 }
 
-
 .entry-meta{
-	width: 320px;
-	float: left;
+	padding-top: 10px;
+	width:105px;
 	padding-left: 4px;
+	float: left;
 }
 
 .imgc{
-	background-image:url('../img/coment.png');
-	background-repeat: no-repeat;
-	background-position:50% 60%;
-	color:#FFF;
-	font-size:xx-small;
-	padding: 11px;
-	text-align:center;
+	// background-image:url('../img/coment.png');
+	// background-repeat: no-repeat;
+	// background-position:50% 60%;
+	// color:#FFF;
+	// font-size:xx-small;
+	// padding: 11px;
+	// text-align:center;
 }
 
 .social_list{
-
-	margin-top: 2px;
-	float:left;
-	width: auto;
-
+	margin-top: 5px;
+	float:right;
+	width: 160px;
+	font-size: 11px;
+	text-align: right;
 }
 
 .social_list ul {
-	margin: 0;
+	display: inline-block;
 	padding: 0;
-	font-size: 16px;
+	margin: 0px;
 }
 
 .social_list ul li{
-	display: inline;
+	display: inline-block;
 	list-style: none;
 	padding: 0;
-
+	margin-left:5px;
+	vertical-align: middle;
 }
 
 .social_list a{
-	color:#6C6C6C;
+	color:@azu_claro;
+	font-size: 18px;
 }
 
 .social_list ul li a:hover{
-	color:#007DD9;
+	color:@verde,
 }
 
 /*///FIN LOS POST///*/
@@ -764,6 +770,44 @@ div.menu {
 	border-top: 1px solid #EEE;
 	font-size: xx-small;
 	border-left:  4px solid #CCC; 
+}
+
+
+//FOOTER
+.contenedor_footer{
+	float: left;
+	width: @full_ancho;
+	background-image: url('../img/degradado_pie.png');
+	.rep_x_center;
+	height: 230px;
+	color: @blanco;
+
+}
+
+.contenedor_footer a{
+	color: @blanco;
+	text-decoration: none;
+}
+
+.elemnetos_footer{
+	margin: @centrar_div;
+	height: 230px;
+	width:@ancho_cuerpo;
+
+}
+
+.columna_footer{
+	float: left;
+	height: 230px;
+	width: 350px;
+	// border: 1px solid #272822;
+}
+.contenido_columna{
+	padding: 10px;
+}
+
+.lista_ctegorias_footer{
+	// overflow-y: scroll;
 }
 
 

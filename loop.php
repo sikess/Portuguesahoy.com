@@ -37,9 +37,7 @@ echo '<img src="'.$postimage.'" alt="" />';
 	}
 } 
 ?>
-<div class="leyenda_im"><?php the_post_thumbnail_caption(); ?></div>
-
-    	
+<div class="leyenda_im"><?php the_post_thumbnail_caption(); ?></div>    	
 </div><!--.imagen_post-->
         
 
@@ -99,19 +97,13 @@ echo '<img src="'.$postimage.'" alt="" />';
 			<span class="cat-links"><span class="entry-utility-prep entry-utility-prep-cat-links"><?php /*_e( 'Posted in ', 'themename' );*/ ?></span><?php /*the_category( ', ' );*/ ?></span>
 			<span class="meta-sep"> | </span>
 			<?php the_tags( '<span class="tag-links">' . __( 'Tagged ', 'themename' ) . '</span>', ', ', '<span class="meta-sep"> | </span>' ); ?>
-			<span class="comments-link"><?php  comments_popup_link( __( '<span>Comentar</span>', 'themename' ), __( '<span class="imgc">01</span>', 'themename' ), __( '<span class="imgc">%</span>', 'themename' ) ); ?></span>
-			<?php edit_post_link( __( 'Edit', 'themename' ), '<span class="meta-sep">|</span> <span class="edit-link">' , '</span>' ); ?>
+			<span class="comments-link"><?php comments_popup_link( __( 'Comentar', 'themename' ), __( '1 Comentario', 'themename' ), __( '% Comentarios', 'themename' ) ); ?></span>
+			<?php edit_post_link( __( 'Editar', 'themename' ), '<span class="meta-sep">|</span> <span class="edit-link">' , '</span>' ); ?>
 
 			<!--<span class="share_post">Compartir:</span>-->
  
 	 
-	 <div class="social_list">
-    	<ul>
-    		<li><a href="#"><i class="foundicon-facebook"></i></a></li>
-    		<li><a href="#"><i class="foundicon-twitter"></i></a></li>
- 			<li><a href="#"><i class="foundicon-google-plus"></i></a></li>
-    	</ul>   	
-    </div><!--.social_list-->
+	 
    
 
 		</footer><!-- #entry-meta -->
@@ -120,11 +112,22 @@ echo '<img src="'.$postimage.'" alt="" />';
 	</article><!-- #post-<?php the_ID(); ?> -->
 
 
-    
+     <div class="social_list">
+    	<ul>
+    		<li>|</li>
+    		<li>Compartir:</li>
+    		<li><?php echo"<a target=_blank href=https://facebook.com/sharer.php?u=";the_permalink(); ?> <i class="foundicon-facebook"></i></a></li>
+    		<li><?php echo"<a target=_blank href=https://twitter.com/share?url=";the_permalink(); ?> <i class="foundicon-twitter"></i></a></li>
+ 			<li><?php echo"<a target=_blank href=https://plus.google.com/share?url=";the_permalink(); ?> <i class="foundicon-google-plus"></i></a></li>
+    	</ul>   	
+    </div><!--.social_list-->
+      
+
 
 	<?php comments_template( '', true ); ?>
     
-      
+   
+
    </div><!--.foot_metas-->
 
     
@@ -133,6 +136,7 @@ echo '<img src="'.$postimage.'" alt="" />';
     <div class="lee_mas">
 	 	<?php echo"<a href=";the_permalink(); echo">"; ?>Leer m&aacutes</a>
 	</div>
+
     	
     </div><!--.cuerpo_post-->
     
