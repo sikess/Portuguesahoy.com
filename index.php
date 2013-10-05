@@ -46,37 +46,10 @@ get_header(); ?>
 
 <div class="contenedor">
 
-	<?php mas_comentados('Mas');?>
-
-	<div class="elements_mas_coment">
-
-		<div class="contne_mas_coment">
-
-			<div class="cuerp_mas_comet">
-				s
-			</div>
-
-		</div>
-
-		<div class="contne_mas_coment">
-
-			<div class="cuerp_mas_comet">
-				s
-			</div>
-			
-		</div>
-
-		<div class="contne_mas_coment">
-
-			<div class="cuerp_mas_comet">
-				s
-			</div>
-			
-		</div>
+	<?php mas_comentados('M&aacutes comentados');?>
 
 
-	</div>
-
+	<?php //entradas_mas_comentadas(); ?>
 </div>
 
 
@@ -84,6 +57,7 @@ get_header(); ?>
 
 
 </div><!--Fin conte_todos_post-->
+
         
    <div class="el_sidebar">
 
@@ -98,7 +72,7 @@ get_header(); ?>
 	
 	 </div><!-- .conte_cuerpo -->	
 
-
+<div class="entre_seccion"></div><!--F entre_seccion-->
 
 
 <div class="contenedor"><!-- Footer -->

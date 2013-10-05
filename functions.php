@@ -506,6 +506,7 @@ function popularPosts($num) {
 if ( function_exists( 'add_image_size' ) ) {  
     add_image_size('para_los_post', 367, 181, true); 
     add_image_size('mas_comentados', 126, 75, true); 
+    add_image_size('side_bar', 80, 80, true);
    
 }  
 
@@ -515,6 +516,7 @@ function hmuda_image_sizes($sizes) {
     $addsizes = array(  
         "para_los_post" => __("Cada post"),
         "mas_comentados" => __("Mas comentados"),
+        "side_bar" => __("Para sidebar"),
     );  
     $newsizes = array_merge($sizes, $addsizes);  
     return $newsizes;  
@@ -628,6 +630,8 @@ function the_breadcrumb() {
 
 // fin breadcrumb
 
+
+///AGREGAS SIDEBARS
 function miplugin_register_sidebars(){
     register_sidebar(array(
         "name" => "Nombre de la Sidebar",
@@ -641,16 +645,113 @@ function miplugin_register_sidebars(){
     ));
 }
 add_action('widgets_init','miplugin_register_sidebars');
+///.AGREGAS SIDEBARS
+
+//MAS COMENTADOS
+function entradas_mas_comentadas($no_posts = 3, $before = '<li>', $after = '</li>', $show_pass_post = false, $duration='') {
+global $wpdb;
+$request = "SELECT ID, post_title, COUNT($wpdb->comments.comment_post_ID) AS 'comment_count' FROM $wpdb->posts, $wpdb->comments";
+$request .= " WHERE comment_approved = '1' AND $wpdb->posts.ID=$wpdb->comments.comment_post_ID AND post_status = 'publish'";
+if(!$show_pass_post) $request .= " AND post_password =''";
+if($duration !="") { $request .= " AND DATE_SUB(CURDATE(),INTERVAL ".$duration." DAY) < post_date ";
+}
+$request .= " GROUP BY $wpdb->comments.comment_post_ID ORDER BY comment_count DESC LIMIT $no_posts";
+$posts = $wpdb->get_results($request);
+$output = '';
+if ($posts) {
+
+foreach ($posts as $post) {
+$post_title = stripslashes($post->post_title);
+$comment_count = $post->comment_count;
+$permalink = get_permalink($post->ID);
+$output .= $before . '<a href="' . $permalink . '" title="' . $post_title.'">' . $post_title . '</a> (' . $comment_count.')' . $after;
+}
+} else {
+$output .= $before . "No hay nada" . $after;
+}
+echo $output;
+    
+
+} 
+
+
+////.MAS COMENTADO
 
 
 
 // BUCLE PARA LOS POST MAS COMENTADOS
 function mas_comentados($titulo){
 
+$args = array(
 
-    echo'<div class="conte_sidebar">';
+        'showposts'=>8,
+        'orderby'=>'comment_count',
+        'order' => 'DESC',
+
+    );
+
+    echo '<div class="elements_mas_coment">';
     echo '<div class="titulo_seccion">';echo $titulo; echo'</div>';
-    $que_posts = new WP_Query('showposts=5&orderby=comment_count&order=DESC');
+    $que_posts = new WP_Query($args);
+    while ($que_posts->have_posts()){ 
+
+        
+            echo '<div class="contne_mas_coment">';
+                echo '<div class="cuerp_mas_comet">';
+                 $que_posts->the_post();
+                 
+            echo '<div class="img_pots_mas_coment">';
+                echo'<a href="'; the_permalink(); echo'">'; the_post_thumbnail('mas_comentados'); echo'</a>';
+            echo '</div>';
+
+            echo'<div class="titulo_post_mas_coment">';
+              echo'<a href="'; the_permalink(); echo'">'; the_title(); echo'</a>';
+             /*the_excerpt();*/
+            echo'</div>';
+
+        echo'<div class="foot_comentado">';
+
+            echo "<ul>";
+                    echo "<li>"; comments_popup_link( __( '<span class="imgc"></span>', 'themename' ) );echo "</li>";
+                    echo "<li>|</li>";
+                     echo "<li>";   printf( __( '<a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> por </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'themename' ),
+                                    get_permalink(),
+                                    get_the_date( 'c' ),
+                                    get_the_date(),
+                                    get_author_posts_url( get_the_author_meta( 'ID' ) ),
+                                    sprintf( esc_attr__( 'Ver por %s', 'themename' ), get_the_author() ),
+                                    get_the_author());
+                    echo "</li>";        
+                                 
+             echo "</ul>";
+        echo'</div>';//.foot_comentado
+       
+        echo'</div>';//.contne_mas_coment
+        echo'</div>';//..cuerp_mas_comet
+
+        }
+    echo'</div>';
+
+}
+
+// .BUCLE PARA LOS POST MAS COMENTADOS
+
+
+
+// BUCLE PRO CATEGORIA SIDE BARS
+function por_categoria($titulo,$categoria,$n_post){
+
+$args = array(
+        'cat'=>$categoria,
+        'showposts'=>$n_post,
+        'orderby'=>'post_date',
+        'order' => 'DESC',
+
+    );
+
+   echo'<div class="conte_sidebar">';
+    echo '<div class="titulo_seccion">';echo $titulo; echo'</div>';
+    $que_posts = new WP_Query($args);
     while ($que_posts->have_posts()){ 
 
         echo '<div class="post_comentado">';
@@ -658,7 +759,7 @@ function mas_comentados($titulo){
                  $que_posts->the_post();
                  
             echo '<div class="img_comentado">';
-                echo'<a href="'; the_permalink(); echo'">'; the_post_thumbnail('mas_comentados'); echo'</a>';
+                echo'<a href="'; the_permalink(); echo'">'; the_post_thumbnail('side_bar'); echo'</a>';
             echo '</div>';
 
             echo'<div class="name_post">';
@@ -677,8 +778,14 @@ function mas_comentados($titulo){
     echo'</div>';
 
 }
+
 // .BUCLE PARA LOS POST MAS COMENTADOS
 
+
+
+
+
+//Para la leyenda fotografica
 
 function the_post_thumbnail_caption() {
   global $post;
@@ -709,11 +816,10 @@ function the_post_thumbnail_caption() {
      //if(count($alt)) echo $alt;
   }
 }
+//.Para la leyenda fotografica
 
 
 ////////PAGINADOR
-
-
 /***** Numbered Page Navigation (Pagination) Code.
       Tested up to WordPress version 3.1.2 *****/
  
@@ -868,6 +974,11 @@ function pagenavi($before = '', $after = '') {
         }
     }
 }
+
+//.PAGINADOR
+
+
+
 
 
 ?>

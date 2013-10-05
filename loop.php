@@ -45,7 +45,7 @@ echo '<img src="'.$postimage.'" alt="" />';
 						get_the_date( 'c' ),
 						get_the_date(),
 						get_author_posts_url( get_the_author_meta( 'ID' ) ),
-						sprintf( esc_attr__( 'View all posts por %s', 'themename' ), get_the_author() ),
+						sprintf( esc_attr__( 'Ver por %s', 'themename' ), get_the_author() ),
 						get_the_author()
 					);
 				?>
@@ -79,7 +79,7 @@ echo '<img src="'.$postimage.'" alt="" />';
 		</div><!-- .entry-summary -->
 		<?php else : ?>
 		<div class="entry-content">
-			<?php the_content_limit('280'); /*the_excerpt_rss();*/ ?>
+			<?php the_content_limit('250'); /*the_excerpt_rss();*/ ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'themename' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		<?php endif; ?>
