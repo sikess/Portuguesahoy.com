@@ -97,7 +97,6 @@ ul.list_men_top li a:hover{background-color:#00bf09;-webkit-border-radius:3px;-m
 .el_sidebar{float:left;width:275px;background-color:#fff;margin-left:6px;padding-bottom:6px;margin-bottom:10px}
 .el_sidebar a{color:#000;text-decoration:none}
 .conte_sidebar{display:inline-block;margin-bottom:20px}
-.titulo_seccion{background-color:#007dd9;font-size:18px;color:#fff;height:33px;padding:7px 0 0 10px;vertical-align:middle;border-top:4px solid #000}
 .post_comentado{float:left;width:275px;height:130px;background-color:#eee;border-bottom:2px solid #fff}
 .contenido_comentado{margin:9px;background-color:#fff;}
 .img_comentado{float:left;height:80px;width:80px;background-color:#fff}
