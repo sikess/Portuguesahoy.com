@@ -59,6 +59,7 @@
     <![endif]-->
 
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/general.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/single_page.css" type="text/css" />
     	
 	
 	<?php wp_head(); ?>

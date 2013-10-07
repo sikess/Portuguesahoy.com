@@ -33,5 +33,22 @@ get_header(); ?>
 
 </div></div></div>
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+   <div class="el_sidebar">
+
+		<!-- <div class="conte_sidebar"> -->
+			<?php get_sidebar(); ?>
+		<!-- </div> -->
+
+	</div>  
+    
+		</div><!--FIN CONTENEDOR DE CUERPO Y LISTA DE POST-->
+	   
+	
+	 </div><!-- .conte_cuerpo -->	
+
+<div class="entre_seccion"></div><!--F entre_seccion-->
+
+
+<div class="contenedor"><!-- Footer -->
+	<?php get_footer();  ?>
+</div><!-- .Footer -->

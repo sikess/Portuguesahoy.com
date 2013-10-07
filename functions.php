@@ -721,8 +721,9 @@ $args = array(
                                     get_author_posts_url( get_the_author_meta( 'ID' ) ),
                                     sprintf( esc_attr__( 'Ver por %s', 'themename' ), get_the_author() ),
                                     get_the_author());
-                    echo "</li>";        
-                                 
+                    echo "</li>"; 
+                    echo "<li>|</li>";       
+                    echo "<li>";the_category( ', ' );echo"</li>";              
              echo "</ul>";
         echo'</div>';//.foot_comentado
        
@@ -767,7 +768,7 @@ $args = array(
              /*the_excerpt();*/
             echo'</div>';
 
-        echo'<div class="foot_comentado">';
+        echo'<div class="foot_comentado_sidebar">';
             comments_popup_link( __( '<span class="imgc">%</span>', 'themename' ) );
         echo'</div>';//.foot_comentado
        

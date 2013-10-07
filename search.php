@@ -6,13 +6,21 @@
 
 get_header(); ?>
 
+<div class="contenedor"><!--CONTENEDOR DE CUERPO Y LISTA DE POST-->
+
+	<div class="entre_seccion"></div><!--F entre_seccion-->
+
+	<div id="conte_cuerpo">
+
+	<div class="conte_todos_post">
+
 		<section id="primary" role="region">
 			<div id="content">
 
 			<?php if ( have_posts() ) : ?>
 
 				<header class="page-header">
-					<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'themename' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+					<h1 class="page-title"><?php printf( __( 'Resultados para: %s', 'themename' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
 				</header>
 
 				<?php get_template_part( 'loop', 'search' ); ?>
@@ -25,7 +33,7 @@ get_header(); ?>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
-						<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'themename' ); ?></p>
+						<p><?php _e( 'No se encontraron resultados, intente de nuevo', 'themename' ); ?></p>
 						<?php get_search_form(); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-0 -->
@@ -35,5 +43,25 @@ get_header(); ?>
 			</div><!-- #content -->
 		</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+	</div></div></div>
+
+
+   <div class="el_sidebar">
+
+		<!-- <div class="conte_sidebar"> -->
+			<?php get_sidebar(); ?>
+		<!-- </div> -->
+
+	</div>  
+    
+</div><!--FIN CONTENEDOR DE CUERPO Y LISTA DE POST-->
+	   
+	
+	 </div><!-- .conte_cuerpo -->	
+
+<div class="entre_seccion"></div><!--F entre_seccion-->
+
+
+<div class="contenedor"><!-- Footer -->
+	<?php get_footer();  ?>
+</div><!-- .Footer -->

@@ -6,6 +6,15 @@
 
 get_header(); ?>
 
+
+<div class="contenedor"><!--CONTENEDOR DE CUERPO Y LISTA DE POST-->
+
+	<div class="entre_seccion"></div><!--F entre_seccion-->
+
+	<div id="conte_cuerpo">
+
+	<div class="conte_todos_post">
+
 		<section id="primary" role="region">
 			<div id="content">
 
@@ -32,5 +41,25 @@ get_header(); ?>
 			</div><!-- #content -->
 		</section><!-- #primary -->
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+	</div></div></div>
+
+
+   <div class="el_sidebar">
+
+		<!-- <div class="conte_sidebar"> -->
+			<?php get_sidebar(); ?>
+		<!-- </div> -->
+
+	</div>  
+    
+</div><!--FIN CONTENEDOR DE CUERPO Y LISTA DE POST-->
+	   
+	
+	 </div><!-- .conte_cuerpo -->	
+
+<div class="entre_seccion"></div><!--F entre_seccion-->
+
+
+<div class="contenedor"><!-- Footer -->
+	<?php get_footer();  ?>
+</div><!-- .Footer -->
