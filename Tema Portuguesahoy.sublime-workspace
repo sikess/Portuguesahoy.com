@@ -1,0 +1,504 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"ba",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "css/general.less",
+			"settings":
+			{
+				"buffer_size": 17430,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<?php\n/**\n * @package WordPress\n * @subpackage themename\n */\n\nget_header(); ?>\n\n<div id=\"cont-recent\">\n	\n    <div class=\"entre_seccion\">\n    </div><!--F entre_seccion-->\n		<div id=\"conter-pop\">\n          <?php //los_recientes(); /*echo popularPosts(4);*/ ?>\n        </div>\n   </div><!--F conter-pop-->\n</div><!--FIn recent-->\n\n\n<div class=\"contenedor\"><!--CONTENEDOR DE CUERPO Y LISTA DE POST-->\n\n	<div class=\"entre_seccion\"></div><!--F entre_seccion-->\n\n	<div id=\"conte_cuerpo\">\n\n	<div class=\"conte_todos_post\">\n\n\n<!--<div id=\"primary\" class=\"container\">\n	<div id=\"content\">-->\n		<?php get_template_part( 'loop', 'index' ); ?>\n<!--	</div><!-- #content -->\n<!--</div>--><!-- #primary -->\n\n<!-- PAGINADOR -->\n<div class=\"contenedor\"><!-- Paginador -->\n	<div class=\"cont_nav\">\n		<div class=\"navigation\">\n			<?php if(function_exists('pagenavi')) { pagenavi(); } ?>\n		</div>\n	</div><!-- .cont_nav -->\n</div><!-- .Paginador -->\n<!-- .AGINADOR -->\n\n<!-- MAS COMENTADOS -->\n\n<div class=\"contenedor\">\n\n	<?php mas_comentados('M&aacutes comentados');?>\n\n\n	<?php //entradas_mas_comentadas(); ?>\n</div>\n\n\n<!-- .MAS COMENTADOS -->\n\n\n</div><!--Fin conte_todos_post-->\n\n        \n   <div class=\"el_sidebar\">\n\n		<!-- <div class=\"conte_sidebar\"> -->\n			<?php get_sidebar(); ?>\n		<!-- </div> -->\n\n	</div>  \n    \n</div><!--FIN CONTENEDOR DE CUERPO Y LISTA DE POST-->\n	   \n	\n	 </div><!-- .conte_cuerpo -->	\n\n<div class=\"entre_seccion\"></div><!--F entre_seccion-->\n\n\n<div class=\"contenedor\"><!-- Footer -->\n	<?php get_footer();  ?>\n</div><!-- .Footer -->\n",
+			"file": "index.php",
+			"file_size": 1615,
+			"file_write_time": 130256025826083984,
+			"settings":
+			{
+				"buffer_size": 1533,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "category.php",
+			"settings":
+			{
+				"buffer_size": 1205,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "search.php",
+			"settings":
+			{
+				"buffer_size": 1543,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "comments.php",
+			"settings":
+			{
+				"buffer_size": 4713,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "single.php",
+			"settings":
+			{
+				"buffer_size": 2817,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "loop.php",
+			"settings":
+			{
+				"buffer_size": 4479,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "functions.php",
+			"settings":
+			{
+				"buffer_size": 37557,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/wamp/www/portuguesahoy.com/wp-content/themes/Portuguesahoy.com/image.php",
+		"/C/wamp/www/portuguesahoy.com/wp-content/themes/Portuguesahoy.com/archive.php",
+		"/C/wamp/www/portuguesahoy.com/wp-content/themes/Portuguesahoy.com/header.php",
+		"/C/wamp/www/portuguesahoy.com/wp-content/themes/Portuguesahoy.com/sidebar.php",
+		"/C/wamp/www/portuguesahoy.com/wp-content/themes/Portuguesahoy.com/css/single_page.less",
+		"/C/wamp/www/portuguesahoy.com/wp-content/themes/Portuguesahoy.com/category.php",
+		"/C/wamp/www/portuguesahoy.com/wp-content/themes/Portuguesahoy.com/page.php",
+		"/C/wamp/www/portuguesahoy.com/wp-includes/general-template.php",
+		"/C/Users/Romina/AppData/Roaming/Sublime Text 2/Packages/List LESS Variables/Default (Windows).sublime-keymap",
+		"/C/Users/Romina/AppData/Roaming/Sublime Text 2/Packages/User/lessvariables.sublime-settings",
+		"/C/Users/Romina/AppData/Roaming/Sublime Text 2/Packages/List LESS Variables/lessvariables.sublime-settings",
+		"/C/wamp/apps/phpmyadmin4.0.4/config.inc.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"lis",
+			"page-header",
+			"content",
+			"Comen",
+			"20",
+			"10px",
+			"This entry was posted in",
+			"entry-content",
+			"content",
+			"entry-content",
+			"entry-meta",
+			"ser",
+			"foot_comentado",
+			".foot_comentado",
+			"ser"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "css/general.less",
+					"settings":
+					{
+						"buffer_size": 17430,
+						"regions":
+						{
+							"bookmarks":
+							{
+								"flags": 144,
+								"icon": "bookmark",
+								"regions":
+								[
+									[
+										16517,
+										16517
+									]
+								],
+								"scope": "bookmarks"
+							}
+						},
+						"selection":
+						[
+							[
+								16171,
+								16149
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/LESS/LESS.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 15139.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "index.php",
+					"settings":
+					{
+						"buffer_size": 1533,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1533,
+								1164
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 720.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "category.php",
+					"settings":
+					{
+						"buffer_size": 1205,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1205,
+								1059
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "search.php",
+					"settings":
+					{
+						"buffer_size": 1543,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								872,
+								879
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 315.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "comments.php",
+					"settings":
+					{
+						"buffer_size": 4713,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2737,
+								2749
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 784.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "single.php",
+					"settings":
+					{
+						"buffer_size": 2817,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2319,
+								2319
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "loop.php",
+					"settings":
+					{
+						"buffer_size": 4479,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								797,
+								867
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 45.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "functions.php",
+					"settings":
+					{
+						"buffer_size": 37557,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7712,
+								7715
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 46.0,
+						"translation.y": 2479.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.475604100151,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 198.0,
+	"status_bar_visible": true
+}

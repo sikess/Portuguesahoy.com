@@ -49,9 +49,15 @@ get_header(); ?>
 						<?php
 							$tag_list = get_the_tag_list( '', ', ' );
 							if ( '' != $tag_list ) {
+<<<<<<< HEAD
 								$utility_text = __( 'Pubicado en %1$s y tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'themename' );
 							} else {
 								$utility_text = __( 'Pubicado en %1$s. Etiquetas <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'themename' );
+=======
+								$utility_text = __( 'Pubicado en %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'themename' );
+							} else {
+								$utility_text = __( 'Pubicado en %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'themename' );
+>>>>>>> b3a0d115c90193d3e9b6b3799ef6bde2835890ae
 							}
 							printf(
 								$utility_text,

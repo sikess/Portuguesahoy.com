@@ -771,7 +771,11 @@ $args = array(
             echo'</div>';
 
         echo'<div class="foot_comentado_sidebar">';
+<<<<<<< HEAD
             comments_popup_link( __( '<span class="imgc">Sin comentarios</span>', 'themename' ) );
+=======
+            comments_popup_link( __( '<span class="imgc">%</span>', 'themename' ) );
+>>>>>>> b3a0d115c90193d3e9b6b3799ef6bde2835890ae
         echo'</div>';//.foot_comentado
        
         echo'</div>';//.post_comentado
