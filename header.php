@@ -59,12 +59,17 @@
     <![endif]-->
 
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/general.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/single_page.css" type="text/css" />
     	
 	
 	<?php wp_head(); ?>
 	</head>
 	
 	<body <?php body_class(); ?>>
+
+
+<?php if(function_exists( 'wp_bannerize' ))
+	wp_bannerize( 'group=Top&random=1&limit=1' ); ?>
 
 	<div class="mi_main">
 		<div class="contendor">

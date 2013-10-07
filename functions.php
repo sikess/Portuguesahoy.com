@@ -507,6 +507,7 @@ if ( function_exists( 'add_image_size' ) ) {
     add_image_size('para_los_post', 367, 181, true); 
     add_image_size('mas_comentados', 126, 75, true); 
     add_image_size('side_bar', 80, 80, true);
+    add_image_size('entrada', 719, 440, true);
    
 }  
 
@@ -517,6 +518,7 @@ function hmuda_image_sizes($sizes) {
         "para_los_post" => __("Cada post"),
         "mas_comentados" => __("Mas comentados"),
         "side_bar" => __("Para sidebar"),
+        "entrada" => __("Normal"),
     );  
     $newsizes = array_merge($sizes, $addsizes);  
     return $newsizes;  
@@ -721,8 +723,9 @@ $args = array(
                                     get_author_posts_url( get_the_author_meta( 'ID' ) ),
                                     sprintf( esc_attr__( 'Ver por %s', 'themename' ), get_the_author() ),
                                     get_the_author());
-                    echo "</li>";        
-                                 
+                    echo "</li>"; 
+                    echo "<li>|</li>";       
+                    echo "<li>";the_category( ', ' );echo"</li>";              
              echo "</ul>";
         echo'</div>';//.foot_comentado
        
@@ -767,8 +770,8 @@ $args = array(
              /*the_excerpt();*/
             echo'</div>';
 
-        echo'<div class="foot_comentado">';
-            comments_popup_link( __( '<span class="imgc">%</span>', 'themename' ) );
+        echo'<div class="foot_comentado_sidebar">';
+            comments_popup_link( __( '<span class="imgc">Sin comentarios</span>', 'themename' ) );
         echo'</div>';//.foot_comentado
        
         echo'</div>';//.post_comentado

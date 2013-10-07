@@ -102,4 +102,9 @@ get_header(); ?>
 			</div><!-- #content -->
 		</div><!-- #primary -->
 
-<?php get_footer(); ?>
+<div class="entre_seccion"></div><!--F entre_seccion-->
+
+
+<div class="contenedor"><!-- Footer -->
+	<?php get_footer();  ?>
+</div><!-- .Footer -->

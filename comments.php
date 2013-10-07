@@ -25,7 +25,7 @@ function handcraftedwp_comment( $comment, $args, $depth ) {
 			<footer>
 				<div class="comment-author vcard">
 					<?php echo get_avatar( $comment, 40 ); ?>
-					<?php printf( __( '%s <span class="says">says:</span>', 'themename' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
+					<?php printf( __( '%s <span class="says">dijo:</span>', 'themename' ), sprintf( '<cite class="fn">%s</cite>', get_comment_author_link() ) ); ?>
 				</div><!-- .comment-author .vcard -->
 				<?php if ( $comment->comment_approved == '0' ) : ?>
 					<em><?php _e( 'Your comment is awaiting moderation.', 'themename' ); ?></em>
@@ -67,7 +67,7 @@ endif; // ends check for handcraftedwp_comment()
 
 	<div id="comments">
 	<?php if ( post_password_required() ) : ?>
-		<div class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'themename' ); ?></div>
+		<div class="nopassword"><?php _e( 'Protegido con contraseña, introduzca su clave.', 'themename' ); ?></div>
 	</div><!-- .comments -->
 	<?php return;
 		endif;
@@ -78,7 +78,7 @@ endif; // ends check for handcraftedwp_comment()
 	<?php if ( have_comments() ) : ?>
 		<h2 id="comments-title">
 			<?php
-			    printf( _n( 'One Response to %2$s', '%1$s Responses to %2$s', get_comments_number(), 'themename' ),
+			    printf( _n( 'Un comentario en %2$s', '%1$s Comentarios  %2$s', get_comments_number(), 'themename' ),
 			        number_format_i18n( get_comments_number() ), '<em>' . get_the_title() . '</em>' );
 			?>
 		</h2>

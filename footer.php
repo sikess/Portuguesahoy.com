@@ -54,7 +54,7 @@
 		<div class="columna_footer">
 			<div class="contenido_columna">
 				<div class="head_colum_footer"><span>S&iacute;guenos en</span></div>
-				<div class="lista_ctegorias_footer">
+				<div id="sin_scroll" class="lista_ctegorias_footer">
 					
 		    		<ul class="social_foot">
 			    		<li><a target=_blank href=https://facebook.com><i class="foundicon-facebook"></i></a></li>
