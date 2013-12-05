@@ -4,9 +4,7 @@
  * @subpackage themename
  */
 ?>
-
-
-	<!-- </div> #main   -->
+<!-- </div> #main   -->
 	<div class="contenedor_footer">
 	
 		<div class="elemnetos_footer">
@@ -17,7 +15,7 @@
 
 			<div class="contenido_columna">
 				<div class="head_colum_footer"><span>Categorías</span></div>
-				<div class="lista_ctegorias_footer">
+				<div class="lista_ctegorias_footer scroll-pane">
 					<ul>
 						<?php wp_list_categories('orderby=name&show_count=1&hide_empty=0&exclude=10&title_li'); ?> 
 					</ul>
@@ -69,6 +67,10 @@
 	</footer><!-- #colophon -->
 <!-- </div> -->
 <!--</div>  #page  -->
+
+
+
+
 </div><!-- .elementos_footer -->
 
 	</div><!-- .contenedor_footer -->

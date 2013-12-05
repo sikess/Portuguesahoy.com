@@ -4,7 +4,7 @@
  * @subpackage themename
  */
 ?>
-<?php por_categoria("Regionales",4,10); ?>
+<?php por_categoria("Regionales",9,10); ?>
 
 <div class="siber_banner_peq">
 <?php if(function_exists( 'wp_bannerize' ))

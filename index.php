@@ -46,7 +46,7 @@ get_header(); ?>
 
 <div class="contenedor">
 
-	<?php mas_comentados('M&aacutes comentados');?>
+	<?php mas_comentados('M&aacutes noticias');?>
 
 
 	<?php //entradas_mas_comentadas(); ?>
@@ -72,7 +72,7 @@ get_header(); ?>
 	
 	 </div><!-- .conte_cuerpo -->	
 
-<div class="entre_seccion"></div><!--F entre_seccion-->
+
 
 
 <div class="contenedor"><!-- Footer -->

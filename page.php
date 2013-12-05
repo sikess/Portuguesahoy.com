@@ -6,8 +6,17 @@
 
 get_header(); ?>
 
-		<div id="primary">99999
-			<div id="content">
+<div class="contenedor"><!--CONTENEDOR DE CUERPO Y LISTA DE POST-->
+
+	<div class="entre_seccion"></div><!--F entre_seccion-->
+
+	<div id="conte_cuerpo">
+
+	<div class="conte_todos_post">
+
+
+		<div id="primary">
+			<div id="content-sp">
 
 				<?php the_post(); ?>
 
@@ -23,10 +32,33 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 				</article><!-- #post-<?php the_ID(); ?> -->
 
-				<?php comments_template( '', true ); ?>
+				<?php //comments_template( '', true ); ?>
 
 			</div><!-- #content -->
 		</div><!-- #primary -->
 <?php //if (function_exists('wp_corenavi')) wp_corenavi(); ?>
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+
+
+	<?php relacionados('Noticias relacionadas'); ?>
+
+</div>
+
+<div class="el_sidebar">
+
+		<!-- <div class="conte_sidebar"> -->
+			<?php get_sidebar(); ?>
+		<!-- </div> -->
+
+</div>  
+
+</div>  
+
+</div>  </div> 
+
+<div class="entre_seccion"></div><!--F entre_seccion-->
+
+
+<div class="contenedor"><!-- Footer -->
+
+	<?php get_footer();  ?>
+</div><!-- .Footer -->

@@ -9,7 +9,9 @@
 
 
 <?php /* Start the Loop */ ?>
+
 <?php while ( have_posts() ) : the_post(); ?>
+
 
 	<div class="conte_el_post">
     <div class="cuerpo_post">
@@ -40,7 +42,7 @@ echo '<img src="'.$postimage.'" alt="" />';
     <div class="cabeza_meta">
     	<div class="post_meta">
 				<?php
-					printf( __( '<a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> por </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'themename' ),
+					printf( __( '<a href="%1$s" rel="bookmark"><span class="calendar"></span><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a>' , 'themename' ),
 						get_permalink(),
 						get_the_date( 'c' ),
 						get_the_date(),
@@ -109,15 +111,7 @@ echo '<img src="'.$postimage.'" alt="" />';
     
 	<?php comments_template( '', true ); ?>
     
-    	<div class="social_list">
-	    	<ul>
-	    		<li>Compartir:</li>
-	    		<li><?php echo"<a target=_blank href=https://facebook.com/sharer.php?u=";the_permalink(); ?> <i class="foundicon-facebook"></i></a></li>
-	    		<li><?php echo"<a target=_blank href=https://twitter.com/share?url=";the_permalink(); ?> <i class="foundicon-twitter"></i></a></li>
-	 			<li><?php echo"<a target=_blank href=https://plus.google.com/share?url=";the_permalink(); ?> <i class="foundicon-google-plus"></i></a></li>
-		    	</ul>   	
-	    </div><!--.social_list-->
-      
+    	
 	 
 
    </div><!--.foot_metas-->
@@ -134,6 +128,20 @@ echo '<img src="'.$postimage.'" alt="" />';
     
     
 </div><!--.conte_el_post-->
+
+<?php if( $wp_query->current_post == 0 ) : ?>
+	<div class="banners_post">
+			<?php if(function_exists( 'wp_bannerize' ))
+	wp_bannerize( 'group=Entre_Noticias_1&random=1&limit=1' ); ?>
+	</div>
+<?php endif; ?>
+
+<?php if( $wp_query->current_post == 3 ) : ?>
+	<div class="banners_post">
+			<?php echo"X";?>
+	</div>
+<?php endif; ?>
+
 
 <?php endwhile; ?>
 

@@ -28,7 +28,7 @@ get_header(); ?>
 					
 						<div class="entry-meta-sp">
 							<?php
-								printf( __( '<span class="meta-prep meta-prep-author">Publicado el </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="meta-sep"> por </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'themename' ),
+								printf( __( '<span class="meta-prep meta-prep-author">Publicado el </span><a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="meta-sep">', 'themename' ),
 									get_permalink(),
 									get_the_date( 'c' ),
 									get_the_date(),
@@ -49,15 +49,9 @@ get_header(); ?>
 						<?php
 							$tag_list = get_the_tag_list( '', ', ' );
 							if ( '' != $tag_list ) {
-<<<<<<< HEAD
 								$utility_text = __( 'Pubicado en %1$s y tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'themename' );
 							} else {
 								$utility_text = __( 'Pubicado en %1$s. Etiquetas <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'themename' );
-=======
-								$utility_text = __( 'Pubicado en %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'themename' );
-							} else {
-								$utility_text = __( 'Pubicado en %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'themename' );
->>>>>>> b3a0d115c90193d3e9b6b3799ef6bde2835890ae
 							}
 							printf(
 								$utility_text,
@@ -77,10 +71,16 @@ get_header(); ?>
 
 			<?php endwhile; // end of the loop. ?>
 
-			</div><!-- #content -->
+	
+			</div><!-- #content --><?php relacionados('Noticias relacionadas'); ?>
 		</div><!-- #primary -->
 
+		
+		
+		
+
 </div>
+
 
 <div class="el_sidebar">
 
@@ -98,5 +98,6 @@ get_header(); ?>
 
 
 <div class="contenedor"><!-- Footer -->
+
 	<?php get_footer();  ?>
 </div><!-- .Footer -->

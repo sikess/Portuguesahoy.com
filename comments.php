@@ -36,7 +36,7 @@ function handcraftedwp_comment( $comment, $args, $depth ) {
 					<a href="<?php echo esc_url( get_comment_link( $comment->comment_ID ) ); ?>"><time pubdate datetime="<?php comment_time( 'c' ); ?>">
 					<?php
 						/* translators: 1: date, 2: time */
-						printf( __( '%1$s at %2$s', 'themename' ), get_comment_date(),  get_comment_time() ); ?>
+						printf( __( '%1$s Hora: %2$s', 'themename' ), get_comment_date(),  get_comment_time() ); ?>
 					</time></a>
 					<?php edit_comment_link( __( '(Edit)', 'themename' ), ' ' );
 					?>

@@ -39,6 +39,14 @@ function modernizr() {
 }    
 add_action('wp_enqueue_scripts', 'modernizr');
 
+
+function js_scroll() {
+    wp_enqueue_script( 'js_scroll' );
+    wp_register_script('js_scroll', get_stylesheet_directory_uri() . '/js/jquery.jscrollpane.min.js');
+    wp_enqueue_script( 'js_scroll' );
+}    
+add_action('wp_enqueue_scripts', 'js_scroll');
+
 /**
  * Remove code from the <head>
  */
@@ -581,7 +589,7 @@ function the_content_limit($max_char, $more_link_text = '(more...)', $striptease
          // echo "<p>";
          echo $content;
          echo "...";
-         echo "&nbsp;<a href='"; the_permalink();        echo "'>Leer m&aacutes</a>";
+         echo "&nbsp;<a href='"; the_permalink();        echo "'></a>";
          // echo "</p>";
      }
  }
@@ -686,22 +694,32 @@ function mas_comentados($titulo){
 
 $args = array(
 
-        'showposts'=>8,
-        'orderby'=>'comment_count',
+        //'showposts'=>10,
+        'orderby'=>'date',
         'order' => 'DESC',
 
     );
+ $ncomentario=get_comments_number();
 
     echo '<div class="elements_mas_coment">';
     echo '<div class="titulo_seccion">';echo $titulo; echo'</div>';
-    $que_posts = new WP_Query($args);
-    while ($que_posts->have_posts()){ 
+    // $que_posts = new WP_Query($args);
+    // while ($que_posts->have_posts()):
 
-        
+    $que_posts = new WP_Query($args, 'offset=20');
+    while ($que_posts->have_posts() ) : $que_posts->the_post(); 
+
+       // $tieneComments = (get_comments_number()>0) ? true : false;
+      //  if ($tieneComments){
+       
+        //if ():
+           // echo"paso";
+
             echo '<div class="contne_mas_coment">';
-                echo '<div class="cuerp_mas_comet">';
-                 $que_posts->the_post();
-                 
+            echo '<div class="cuerp_mas_comet">';
+            $que_posts->the_post();
+ 
+                          
             echo '<div class="img_pots_mas_coment">';
                 echo'<a href="'; the_permalink(); echo'">'; the_post_thumbnail('mas_comentados'); echo'</a>';
             echo '</div>';
@@ -715,8 +733,8 @@ $args = array(
 
             echo "<ul>";
                     echo "<li>"; comments_popup_link( __( '<span class="imgc"></span>', 'themename' ) );echo "</li>";
-                    echo "<li>|</li>";
-                     echo "<li>";   printf( __( '<a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a> <span class="sep"> por </span> <span class="author vcard"><a class="url fn n" href="%4$s" title="%5$s">%6$s</a></span>', 'themename' ),
+                    //echo "<li>|</li>";
+                     echo "<li>";   printf( __( '<a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a>', 'themename' ),
                                     get_permalink(),
                                     get_the_date( 'c' ),
                                     get_the_date(),
@@ -732,12 +750,96 @@ $args = array(
         echo'</div>';//.contne_mas_coment
         echo'</div>';//..cuerp_mas_comet
 
-        }
+    endwhile;
     echo'</div>';
+ //endif;   
 
 }
 
 // .BUCLE PARA LOS POST MAS COMENTADOS
+
+
+
+
+// BUCLE PARA LOS POST RELACIONADOS
+function relacionados($titulo){
+
+
+$cates=current_category();
+
+$args = array(
+
+        'cat'=>$cates,
+        'showposts'=>10,
+        'orderby'=>'date',
+        'order' => 'DESC',
+
+    );
+ $ncomentario=get_comments_number();
+
+    echo '<div class="elements_mas_coment">';
+    echo '<div class="titulo_seccion">';echo $titulo; echo'</div>';
+    $que_posts = new WP_Query($args);
+    while ($que_posts->have_posts()):
+       // $tieneComments = (get_comments_number()>0) ? true : false;
+      //  if ($tieneComments){
+       
+        //if ():
+           // echo"paso";
+
+            echo '<div class="contne_mas_coment">';
+            echo '<div class="cuerp_mas_comet">';
+            $que_posts->the_post();
+ 
+                          
+            echo '<div class="img_pots_mas_coment">';
+                echo'<a href="'; the_permalink(); echo'">'; the_post_thumbnail('mas_comentados'); echo'</a>';
+            echo '</div>';
+
+            echo'<div class="titulo_post_mas_coment">';
+              echo'<a href="'; the_permalink(); echo'">'; the_title(); echo'</a>';
+             /*the_excerpt();*/
+            echo'</div>';
+
+        echo'<div class="foot_comentado">';
+
+            echo "<ul>";
+                    echo "<li>"; comments_popup_link( __( '<span class="imgc"></span>', 'themename' ) );echo "</li>";
+                    echo "<li>|</li>";
+                     echo "<li>";   printf( __( '<a href="%1$s" rel="bookmark"><time class="entry-date" datetime="%2$s" pubdate>%3$s</time></a>', 'themename' ),
+                                    get_permalink(),
+                                    get_the_date( 'c' ),
+                                    get_the_date(),
+                                    get_author_posts_url( get_the_author_meta( 'ID' ) ),
+                                    sprintf( esc_attr__( 'Ver por %s', 'themename' ), get_the_author() ),
+                                    get_the_author());
+                    echo "</li>"; 
+                    echo "<li>|</li>";       
+                    echo "<li>";the_category( ', ' );echo"</li>";              
+             echo "</ul>";
+        echo'</div>';//.foot_comentado
+       
+        echo'</div>';//.contne_mas_coment
+        echo'</div>';//..cuerp_mas_comet
+
+    endwhile;
+    echo'</div>';
+ //endif;   
+
+}
+
+// .BUCLE PARA LOS POST RELACIONADOS
+
+
+function current_category() {
+    global $cat;
+    if (is_category() && $cat) {
+        return $cat;
+    } else {
+        $var = get_the_category();
+        return $var[0]->cat_ID;
+    }
+} 
 
 
 
@@ -747,15 +849,15 @@ function por_categoria($titulo,$categoria,$n_post){
 $args = array(
         'cat'=>$categoria,
         'showposts'=>$n_post,
-        'orderby'=>'post_date',
+        'orderby'=>'date',
         'order' => 'DESC',
-
-    );
+   );
 
    echo'<div class="conte_sidebar">';
     echo '<div class="titulo_seccion">';echo $titulo; echo'</div>';
     $que_posts = new WP_Query($args);
     while ($que_posts->have_posts()){ 
+
 
         echo '<div class="post_comentado">';
             echo '<div class="contenido_comentado">';
@@ -771,11 +873,7 @@ $args = array(
             echo'</div>';
 
         echo'<div class="foot_comentado_sidebar">';
-<<<<<<< HEAD
             comments_popup_link( __( '<span class="imgc">Sin comentarios</span>', 'themename' ) );
-=======
-            comments_popup_link( __( '<span class="imgc">%</span>', 'themename' ) );
->>>>>>> b3a0d115c90193d3e9b6b3799ef6bde2835890ae
         echo'</div>';//.foot_comentado
        
         echo'</div>';//.post_comentado
@@ -983,6 +1081,31 @@ function pagenavi($before = '', $after = '') {
 }
 
 //.PAGINADOR
+
+//Colocar imagen destacada de forma automatica
+function auto_post_thumbnail() {
+          global $post;
+          $already_has_thumb = has_post_thumbnail($post->ID);
+              if (!$already_has_thumb)  {
+              $attached_image = get_children( "post_parent=$post->ID&post_type=attachment&post_mime_type=image&numberposts=1" );
+                          if ($attached_image) {
+                                foreach ($attached_image as $attachment_id => $attachment) {
+                                set_post_thumbnail($post->ID, $attachment_id);
+                                }
+                           } else {
+                                set_post_thumbnail($post->ID, 'ID_imagen_por_defecto');
+                           }
+                        }
+      }
+ //Final de la función
+add_action('the_post', 'auto_post_thumbnail');
+add_action('save_post', 'auto_post_thumbnail');
+add_action('draft_to_publish', 'auto_post_thumbnail');
+add_action('new_to_publish', 'auto_post_thumbnail');
+add_action('pending_to_publish', 'auto_post_thumbnail');
+add_action('future_to_publish', 'auto_post_thumbnail');
+
+
 
 
 

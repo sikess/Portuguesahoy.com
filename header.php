@@ -11,6 +11,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
 
 <head>
+	
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta http-equiv="X-UA-Compatible" content="chrome=1">
 
@@ -60,13 +61,38 @@
 
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/general.css" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/single_page.css" type="text/css" />
-    	
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/jquery.jscrollpane.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory');?>/css/banners.css" type="text/css" />
 	
+
+
+
 	<?php wp_head(); ?>
+
 	</head>
 	
 	<body <?php body_class(); ?>>
 
+		<script type="text/javascript">
+
+		$(function()
+{
+	$('.scroll-pane').jScrollPane();
+});
+
+		</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-45101034-1', 'portuguesahoy.com');
+  ga('send', 'pageview');
+
+</script>
 
 <?php if(function_exists( 'wp_bannerize' ))
 	wp_bannerize( 'group=Top&random=1&limit=1' ); ?>
@@ -113,14 +139,15 @@
 
      <div id="cont_menu_prin">
 
-     		<div class="_menu_prin">
-     
      		<div id="inicio_link">
             	<ul id="" class="">
- 					<li><a href="http://localhost/portabily.com"> </a></li>
+ 					<li><a href="<?php bloginfo('url');?>"> </a></li>
                 </ul>   
             </div><!-- .inicio_link -->
- 			
+
+     		<div class="_menu_prin">
+     
+     		 			
  			<div id="access" role="navigation" class="contiene_mp">
         		  <?php wp_nav_menu( array( 'container_class' => 'menu-header','theme_location' => 'primary' ) );?>
     		</div>
@@ -137,4 +164,5 @@
 
 
 	
-		<div id="main">
+<div id="main">
+
